@@ -1,114 +1,132 @@
-import { useState } from "react";
-import { Moon, Sun, Linkedin, Mail } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaqif | Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0055aa;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .job {
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .skills-list, .responsibilities {
+            margin: 10px 0 0 20px;
+        }
+        .header {
+            text-align: center;
+        }
+        .header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .tagline {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
 
-export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-
-  return (
-    <div className={darkMode ? "dark" : ""}>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
-        {/* Header */}
-        <header className="flex justify-between items-center p-6 shadow-md dark:shadow-gray-700">
-          <h1 className="text-2xl font-bold">Mohd Thaqif Tahang</h1>
-          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-            {darkMode ? <Sun /> : <Moon />}
-          </button>
-        </header>
-
-        {/* Hero Section */}
-        <section className="text-center py-16 px-4">
-          <h2 className="text-4xl font-bold mb-4">Manufacturing Product Engineer</h2>
-          <p className="max-w-2xl mx-auto text-lg">
-            Passionate about solving production line challenges, improving yield, and diving deep into automation projects.
-          </p>
-        </section>
-
-        {/* About Me */}
-        <section className="px-4 py-12 bg-gray-100 dark:bg-gray-800">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4">About Me</h3>
-            <p>
-              I am currently a Manufacturing Product Engineer at Texas Instruments with hands-on experience in test
-              engineering, automation, and production line optimization. Previously, I contributed to Covid-19 data
-              analytics at the Ministry of Health Malaysia. I enjoy exploring tech and am open to opportunities in the
-              tech industry.
-            </p>
-          </div>
-        </section>
-
-        {/* Experience */}
-        <section className="px-4 py-12">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-6">Experience</h3>
-            <div className="space-y-6">
-              <Card>
-                <CardContent className="p-4">
-                  <h4 className="text-xl font-bold">Texas Instruments</h4>
-                  <p className="italic">Manufacturing Product Engineer | Mar 2022 – Present</p>
-                  <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-                    <li>Collaborated with technicians to solve production line issues</li>
-                    <li>Led automation projects for test operations</li>
-                    <li>Utilized ETS364 ATE platform and test handler technologies (SO3000, LT9900, LH4, etc.)</li>
-                    <li>Worked with Business Units to address product quality and yield improvements</li>
-                    <li>Participated in New Product Introduction for Lead Frame Strip Test</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-4">
-                  <h4 className="text-xl font-bold">Ministry of Health Malaysia</h4>
-                  <p className="italic">Protégé – IT Executive | Jul 2021 – Jan 2022</p>
-                  <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-                    <li>Created data visualizations and analyses for Covid-19 cases (Seafarer & Oil & Gas sector)</li>
-                    <li>Managed pivot tables and analytics for foreign worker data</li>
-                    <li>Collected and entered Covid-19 variant data into central systems</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section className="px-4 py-12 bg-gray-100 dark:bg-gray-800">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4">Skills</h3>
-            <ul className="flex flex-wrap gap-4 text-sm">
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">ETS364</li>
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Automation Projects</li>
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Test Handlers</li>
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Data Analysis</li>
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Excel</li>
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Debugging & Troubleshooting</li>
-              <li className="bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Python (basic)</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section className="px-4 py-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
-            <p>Feel free to connect with me via email or LinkedIn!</p>
-            <div className="flex justify-center gap-6 mt-4">
-              <a href="mailto:your.email@example.com" className="flex items-center gap-2 hover:underline">
-                <Mail /> Email
-              </a>
-              <a href="https://www.linkedin.com/in/mohd-thaqif-tahang-9373771b5/" target="_blank" className="flex items-center gap-2 hover:underline">
-                <Linkedin /> LinkedIn
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="text-center p-4 text-xs text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Mohd Thaqif Tahang. All rights reserved.
-        </footer>
-      </div>
+<div class="container">
+    
+    <div class="header">
+        <h1>Mohd Thaqif Bin Tahang</h1>
+        <p class="tagline">Manufacturing Product Engineer | Test Engineer | Data Enthusiast</p>
     </div>
-  );
-}
+
+    <div class="section">
+        <h2>Profile Summary</h2>
+        <p>
+            Data Analytics enthusiast with 3+ years of experience in data preparation, reporting, dashboard
+development, and cross-functional analytics. Adept at problem-solving, automation, and cross-functional collaboration,
+with a growing focus on data-driven decision-making. Seeking opportunities to apply technical and analytical skills in
+engineering or technology-driven environments.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Work Experience</h2>
+
+        <div class="job">
+            <div class="job-title">Test Engineer – Texas Instruments Malaysia</div>
+            <div class="job-date">Mar 2025 – Oct 2025</div>
+            <ul class="responsibilities">
+                <li>Supported Texas Instruments AUDIO product line across A/T sites in Asia.</li>
+                <li>Implemented test coverage enhancements for customers.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Manufacturing Product Engineer – Texas Instruments Malaysia</div>
+            <div class="job-date">Mar 2022 – Mar 2025</div>
+            <ul class="responsibilities">
+                <li>Collaborated with technicians to solve production line issues.</li>
+                <li>Developed automation projects to support ATE testing processes.</li>
+                <li>Supported Business Unit on product issues and yield improvement.</li>
+                <li>Troubleshot and debugged test solutions.</li>
+                <li>Involved in New Product Introduction (NPI) for Lead Frame Strip Test.</li>
+                <li>Used ETS364 tester platform.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Protégé IT Executive – Ministry of Health Malaysia</div>
+            <div class="job-date">Jul 2021 – Jan 2022</div>
+            <ul class="responsibilities">
+                <li>Created Covid-19 data visualization and analysis for the Seafarer & Oil & Gas sector.</li>
+                <li>Created pivot tables for foreign worker Covid-19 cases.</li>
+                <li>Collected Covid-19 variant data and performed data entry.</li>
+                <li>Managed Excel datasets and prepared reports.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li>ATE Platforms: ETS364, SO3000, LT9900, LT9730, MT9918, AETV16, Advantest LH4</li>
+            <li>Automation & Debugging</li>
+            <li>Data Analysis & Visualization</li>
+            <li>Excel (Advanced), Pivot Tables</li>
+            <li>Manufacturing Process Support</li>
+            <li>Test Development, Test Coverage Improvement</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Phone: +60198227107</p>
+        <p>Email: mohdthaqif06@gmail.com</p>
+        <p>Linkedin:  <a href="https://www.linkedin.com/in/mohd-thaqif-bin-tahang-9373771b5/" target="_blank">
+            mohd-thaqif-bin-tahang </a></p>
+        <p>Location: Kuala Lumpur, Malaysia</p>
+    </div>
+
+</div>
+
+</body>
+</html>
