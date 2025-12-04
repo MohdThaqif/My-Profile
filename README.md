@@ -1,2 +1,2 @@
-# CV
-My profile website
+# My profile website
+Just a beginner :)
